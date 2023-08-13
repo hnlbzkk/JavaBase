@@ -9,8 +9,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableTransactionManagement
-@ComponentScan(basePackages={"com.xyz.web"})
-@MapperScan("com.xyz.web.mapper")
+@ComponentScan(basePackages={"com.xyz.web","com.xyz.base","com.xyz.security", "com.xyz.db"})
+@MapperScan(value = {"com.xyz.security.mapper"/*, "com.xyz.web.mapper"*/})
 //添加此注解，开启AOP
 @EnableAspectJAutoProxy
 public class LauncherApplication {

@@ -23,10 +23,10 @@
         <dependencies>
             <!-- public dependencies -->
 
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-            </dependency>
+            <!--<dependency>-->
+            <!--    <groupId>org.springframework.boot</groupId>-->
+            <!--    <artifactId>spring-boot-starter-test</artifactId>-->
+            <!--</dependency>-->
 
             <!--<dependency>-->
             <!--    <groupId>org.slf4j</groupId>-->
@@ -34,11 +34,17 @@
             <!--    <version>1.7.36</version>-->
             <!--</dependency>-->
 
-            <dependency>
-                <groupId>org.junit.jupiter</groupId>
-                <artifactId>junit-jupiter-api</artifactId>
-                <scope>test</scope>
-            </dependency>
+            <!--<dependency>-->
+            <!--    <groupId>org.junit.jupiter</groupId>-->
+            <!--    <artifactId>junit-jupiter-api</artifactId>-->
+            <!--    <scope>test</scope>-->
+            <!--</dependency>-->
+
+            <!--<dependency>-->
+            <!--    <groupId>org.projectlombok</groupId>-->
+            <!--    <artifactId>lombok</artifactId>-->
+            <!--</dependency>-->
+
         </dependencies>
     </dependencyManagement>
 
@@ -47,7 +53,7 @@
         <module>project-base</module>
         <module>project-web</module>
         <module>project-db</module>
-        <!--<module>project-security</module>-->
+        <module>project-security</module>
         <module>project-ws</module>
         <module>project-launcher</module>
     </modules>

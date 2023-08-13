@@ -12,16 +12,16 @@ import java.util.Collections;
 public class MySQLAutoGenerator {
     private static final String url = "jdbc:mysql://localhost:3306/java_base?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai";
 
-    private static final String userName = "root";
+    private static final String userName = "your_username";
 
-    private static final String password = "zk123456";
+    private static final String password = "your_password";
 
     private static final String author = "ZKKzs";
 
     /**
      * project path (absolute)
      */
-    private static final String absolutePath = "E:\\Project\\IdeaProject\\JavaBase";
+    private static final String absolutePath = "E:\\Project\\JavaBase";
 
     /**
      * db module path
@@ -48,7 +48,7 @@ public class MySQLAutoGenerator {
                         builder.parent(parent)
                                 .pathInfo(Collections.singletonMap(OutputFile.xml, absolutePath + dbPath)))
                 .strategyConfig(builder ->
-                        builder.addInclude("user_info"))
+                        builder.addInclude("db_admin","db_user"))
                 .execute();
     }
 }
