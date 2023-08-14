@@ -7,13 +7,15 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import jakarta.servlet.http.HttpServletRequest;
 
+import java.util.Objects;
+
 
 /**
  * @author ZKKzs
  **/
 public class LogUtils {
 
-    private static final HttpServletRequest REQUEST = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+    private static final HttpServletRequest REQUEST = ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getRequest();
 
     public static String error(ResultCode code) {
         return new LogParam(

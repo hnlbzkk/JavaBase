@@ -25,7 +25,7 @@ public enum ResultCode {
     USER_ACCOUNT_FORBIDDEN("ERR2009", "用户权限不足"),
     USER_MODIFY_ERROR("ERR2010", "用户修改信息失败"),
 
-    EMAIL_SEND_ERROR("ERR3001","邮件发送失败"),
+    IP_FORBIDDEN("ERR3001","该IP被禁止,请稍后再试"),
 
     OPERATION_ERROR("ERR9997", "操作失败"),
     TOKEN_ERROR("ERR9998", "token验证失败"),
