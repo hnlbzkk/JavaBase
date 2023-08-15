@@ -1,11 +1,9 @@
 package com.xyz.base.exception;
 
-
 import com.xyz.base.message.ResultCode;
 
 /**
  * @author ZKKzs
- * @since 2022/12/6
  **/
 public class ServiceException extends RuntimeException{
 

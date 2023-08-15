@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * 测试用户权限API-security
+ *
  * @author ZKKzs
  * @since 2023/8/14
  **/

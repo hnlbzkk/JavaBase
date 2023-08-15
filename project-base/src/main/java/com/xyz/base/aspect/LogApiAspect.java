@@ -20,7 +20,7 @@ public class LogApiAspect {
     public void logApi() {}
 
     /**
-     * 环绕通知
+     * 环绕通知使用Around
      */
     @Around("logApi()")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
