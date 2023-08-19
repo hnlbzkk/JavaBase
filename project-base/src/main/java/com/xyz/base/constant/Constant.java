@@ -10,4 +10,6 @@ public class Constant {
 
     public static final String COUNT_PREFIX = "COUNT:";
 
+    public static final String LOGIN_PREFIX = "LOGIN:";
+
 }

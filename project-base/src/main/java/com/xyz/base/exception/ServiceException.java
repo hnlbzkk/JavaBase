@@ -5,7 +5,7 @@ import com.xyz.base.message.ResultCode;
 /**
  * @author ZKKzs
  **/
-public class ServiceException extends RuntimeException{
+public class ServiceException extends RuntimeException {
 
     ResultCode code;
 

@@ -13,7 +13,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new RequestInterceptor()).addPathPatterns("/**").excludePathPatterns("/user/**");
+        registry.addInterceptor(new RequestInterceptor()).addPathPatterns("/**").excludePathPatterns("/account/**");
         WebMvcConfigurer.super.addInterceptors(registry);
     }
 

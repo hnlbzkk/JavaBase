@@ -38,7 +38,8 @@ public class AccountConverter {
         AdminEntity result = new AdminEntity();
 
         result.setUserId(user.getId());
-        result.setAdminLevel("1");
+        // todo: mysql table: db_admin admin_level
+        result.setAdminLevel("normal");
         result.setPermissionTime(LocalDateTime.now());
 
         return result;

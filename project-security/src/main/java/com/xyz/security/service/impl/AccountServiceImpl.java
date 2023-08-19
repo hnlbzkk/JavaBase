@@ -26,6 +26,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
+import static com.xyz.base.constant.Constant.LOGIN_PREFIX;
+
 /**
  * <p>
  * 服务实现类
@@ -69,7 +71,7 @@ public class AccountServiceImpl implements AccountService {
             String email = loginUser.getUser().getEmail();
 
             // 3.把用户信息保存在redis中
-            redisCache.setCacheObject("login:" + email, loginUser);
+            redisCache.setCacheObject(LOGIN_PREFIX + email, loginUser);
 
             // 4.返回 JWT 数据
             return new LoginVO(JwtUtils.createJWT(json));

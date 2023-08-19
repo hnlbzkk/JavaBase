@@ -17,6 +17,8 @@ import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
 
+import static com.xyz.base.constant.Constant.LOGIN_PREFIX;
+
 /**
  * JWT工具类
  */
@@ -29,11 +31,13 @@ public class JwtUtils {
         JwtUtils.redisUtil = redisUtil;
     }
 
+    // todo: ttl
     /**
      * 有效期 24小时
      */
     private static final Long JWT_TTL = 24 * 60 * 60 * 1000L;
 
+    // todo: Jwt Key
     /**
      * 设置秘钥
      */
@@ -97,7 +101,7 @@ public class JwtUtils {
         LoginUser user = JSON.parseObject(claims.getSubject(), LoginUser.class);
 
         // 从 redis 中获取信息
-        String redisKey = "login:" + user.getUser().getEmail();
+        String redisKey = LOGIN_PREFIX + user.getUser().getEmail();
         LoginUser redisUser = redisUtil.getCacheObject(redisKey);
         if (Objects.isNull(redisUser)) {
             throw new RuntimeException("用户未登录");

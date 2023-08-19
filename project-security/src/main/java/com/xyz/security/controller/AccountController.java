@@ -25,7 +25,7 @@ public class AccountController {
     @PostMapping("/register")
     @LogApi
     public ResponseResult register(@RequestBody @Valid RegisterParam param) {
-        Boolean isSuccess = accountService.register(param);
+        boolean isSuccess = accountService.register(param);
         return isSuccess ?
                 ResponseResult.success() :
                 ResponseResult.fail(ResultCode.USER_REGISTER);

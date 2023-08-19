@@ -75,10 +75,13 @@ public class SecurityConfig {
                                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(
                         request -> request
+                                // todo: add path
                                 // 这些接口都是匿名通过
                                 .requestMatchers("/account/**", "/resource/**", "/user/forget", "/access/**").permitAll()
+                                // todo: add path
                                 // 只有 normal admin 权限的人才可以访问 db_admin中的level字段
                                 .requestMatchers("/user/**").hasAnyAuthority("normal", "admin")
+                                // todo: add path
                                 // 只有 admin 权限的人才可以访问 db_admin中的level字段
                                 .requestMatchers("/admin/**").hasAnyAuthority("admin")
                                 // 任何没有匹配上的其他的 url请求，只需要用户被验证

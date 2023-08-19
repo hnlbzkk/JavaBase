@@ -23,6 +23,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Objects;
 
+import static com.xyz.base.constant.Constant.LOGIN_PREFIX;
+
 /**
  * token验证过滤器
  *
@@ -56,7 +58,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
         LoginUser user = JSON.parseObject(claims.getSubject(), LoginUser.class);
 
         // 3.从 redis 中获取信息
-        String redisKey = "login:" + user.getUser().getEmail();
+        String redisKey = LOGIN_PREFIX + user.getUser().getEmail();
         LoginUser redisUser = redisUtil.getCacheObject(redisKey);
         if (Objects.isNull(redisUser)) {
             logger.error(LogUtils.error("用户未登录"));

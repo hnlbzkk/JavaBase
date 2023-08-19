@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableTransactionManagement
+// todo: modify packages path
 @ComponentScan(basePackages={"com.xyz.web","com.xyz.base","com.xyz.security", "com.xyz.db"})
 @MapperScan(value = {"com.xyz.security.mapper"/*, "com.xyz.web.mapper"*/})
 //添加此注解，开启AOP

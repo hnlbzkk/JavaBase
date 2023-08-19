@@ -2,11 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <!-- todo: modify parent module name-->
     <parent>
         <groupId>com.xyz</groupId>
         <artifactId>JavaBase</artifactId>
         <version>0.0.1</version>
-        <!--<relativePath>../pom.xml</relativePath>-->
     </parent>
 
     <artifactId>project-web</artifactId>
@@ -44,6 +44,7 @@
             <version>3.5.3</version>
         </dependency>
 
+        <!-- todo: modify module name-->
         <!--  base-module  -->
         <dependency>
             <groupId>com.xyz</groupId>

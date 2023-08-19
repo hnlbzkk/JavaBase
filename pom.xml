@@ -9,6 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+    <!-- todo: modify parent module name-->
     <groupId>com.xyz</groupId>
     <artifactId>JavaBase</artifactId>
     <version>0.0.1</version>
@@ -21,34 +22,11 @@
     </properties>
     <dependencyManagement>
         <dependencies>
-            <!-- public dependencies -->
-
-            <!--<dependency>-->
-            <!--    <groupId>org.springframework.boot</groupId>-->
-            <!--    <artifactId>spring-boot-starter-test</artifactId>-->
-            <!--</dependency>-->
-
-            <!--<dependency>-->
-            <!--    <groupId>org.slf4j</groupId>-->
-            <!--    <artifactId>slf4j-api</artifactId>-->
-            <!--    <version>1.7.36</version>-->
-            <!--</dependency>-->
-
-            <!--<dependency>-->
-            <!--    <groupId>org.junit.jupiter</groupId>-->
-            <!--    <artifactId>junit-jupiter-api</artifactId>-->
-            <!--    <scope>test</scope>-->
-            <!--</dependency>-->
-
-            <!--<dependency>-->
-            <!--    <groupId>org.projectlombok</groupId>-->
-            <!--    <artifactId>lombok</artifactId>-->
-            <!--</dependency>-->
-
         </dependencies>
     </dependencyManagement>
 
 
+    <!-- todo: modify module name-->
     <modules>
         <module>project-base</module>
         <module>project-web</module>
@@ -63,9 +41,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <!--<configuration>-->
-                <!--    <mainClass>com.xyz.launcher.LauncherApplication</mainClass>-->
-                <!--</configuration>-->
             </plugin>
         </plugins>
     </build>
