@@ -1,4 +1,4 @@
-package com.xyz.base.aspect;
+package com.xyz.base.annotation.aspect;
 
 import com.xyz.base.utils.LogUtils;
 import org.aspectj.lang.ProceedingJoinPoint;

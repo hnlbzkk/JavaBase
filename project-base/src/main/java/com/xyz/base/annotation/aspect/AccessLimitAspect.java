@@ -1,4 +1,4 @@
-package com.xyz.base.aspect;
+package com.xyz.base.annotation.aspect;
 
 import com.xyz.base.annotation.AccessLimit;
 import com.xyz.base.exception.ServiceException;
